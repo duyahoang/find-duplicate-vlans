@@ -45,6 +45,19 @@ The program will generate two types of files:
 1. `vlans-list-N.txt`: This file contains the VLAN IDs entered for the Nth list.
 2. `duplicate-VLANs.txt`: This file lists the duplicate VLAN IDs across multiple lists.
 
+For example:
+```
+VLAN List 1: [1, 2, 3]
+VLAN List 2: [3, 4, 5]
+VLAN List 3: [5, 6, 7]
+
+Result in duplicate-VLANs.txt:
+('List_1', 'List_2'):
+3
+('List_2', 'List_3'):
+5
+```
+
 ## Testing
 
 If you are interested in running tests to verify the script is working as expected, you can do so by running the command: `python find_duplicate_vlans.py --test` or `python3 find_duplicate_vlans.py --test`
